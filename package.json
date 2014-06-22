@@ -1,0 +1,14 @@
+{
+  "name": "co-timeout",
+  "version": "0.0.1",
+  "dependencies": {
+    "co": "^3.0.6",
+    "ms": "^0.6.2"
+  },
+  "devDependencies": {
+    "co": "^3.0.6",
+    "co-wait": "0.0.0",
+    "co-mocha": "0.0.4",
+    "mocha": "^1.20.1"
+  }
+}
