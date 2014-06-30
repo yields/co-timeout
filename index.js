@@ -21,10 +21,9 @@ module.exports = function(ms, fn){
 
   return function(done){
     var ended;
-    var tid;
+    var id;
 
-    tid = setTimeout(function(){
-      if (ended) return;
+    id = setTimeout(function(){
       ended = true;
       var err = new Error('timeout of "' + ms + '" reached');
       err.timeout = ms;
@@ -33,8 +32,7 @@ module.exports = function(ms, fn){
 
     fn(function(err){
       if (ended) return;
-      ended = true;
-      clearTimeout(tid);
+      clearTimeout(id);
       if (err) return done(err);
       var args = [].slice.call(arguments, 1);
       done.apply(null, [null].concat(args));
