@@ -17,7 +17,8 @@ var co = require('co');
 
 module.exports = function(ms, fn){
   var fn = isGenerator(fn) ? co(fn) : fn;
-  var ms = parse(ms);
+  if (typeof ms === 'string')
+    ms = parse(ms);
 
   return function(done){
     var ended;
