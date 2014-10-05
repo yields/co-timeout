@@ -1,6 +1,6 @@
 {
   "name": "co-timeout",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "dependencies": {
     "co": "^3.0.6",
     "ms": "^0.6.2"
