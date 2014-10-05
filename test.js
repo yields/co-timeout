@@ -30,6 +30,11 @@ describe('co-timeout', function(){
     var vals = yield timeout('50ms', values(1, 2));
     assert.deepEqual([1, 2], vals);
   })
+
+  it('should accept numbers', function*(){
+    var vals = yield timeout(50, values(1, 2));
+    assert.deepEqual([1, 2], vals);
+  });
 })
 
 function *values(){
